@@ -19,21 +19,13 @@
     <h1>Formulario de Productos</h1>
     <form class="formulario" action="informacion.php" method="POST">
         <table class="tabla">
-            <?php for ($i=1; $i<=3; $i++): ?>
-            <tr>
-                <td>Nombre del Producto <?php echo $i; ?></td>
-                <td><input type="text" name="producto<?php echo $i; ?>" required></td>
-            </tr>
-            <tr>
-                <td>Precio del Producto <?php echo $i; ?></td>
-                <td><input type="number" name="precio<?php echo $i; ?>" step="0.01" required></td>
-            </tr>
-            <?php endfor; ?>
-            <tr>
-                <td colspan="2" style="text-align: center;">
-                    <input type="submit" value="Enviar Datos" class="boton">
-                </td>
-            </tr>
+            <tr><td>Nombre del Producto 1</td><td><input type="text" name="producto1" required></td></tr>
+            <tr><td>Precio del Producto 1</td><td><input type="number" name="precio1" step="0.01" required></td></tr>
+            <tr><td>Nombre del Producto 2</td><td><input type="text" name="producto2" required></td></tr>
+            <tr><td>Precio del Producto 2</td><td><input type="number" name="precio2" step="0.01" required></td></tr>
+            <tr><td>Nombre del Producto 3</td><td><input type="text" name="producto3" required></td></tr>
+            <tr><td>Precio del Producto 3</td><td><input type="number" name="precio3" step="0.01" required></td></tr>
+            <tr><td colspan="2" style="text-align: center;"><input type="submit" value="Enviar Datos" class="boton"></td></tr>
         </table>
     </form>
 </body>
