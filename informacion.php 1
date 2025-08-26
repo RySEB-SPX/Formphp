@@ -1,6 +1,5 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Capturando los datos del formulario
     $producto1 = $_POST['producto1'];
     $precio1 = floatval($_POST['precio1']);
     
@@ -10,14 +9,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $producto3 = $_POST['producto3'];
     $precio3 = floatval($_POST['precio3']);
     
-    // Calculando la suma de los precios
     $sumaPrecios = $precio1 + $precio2 + $precio3;
     
-    // Aplicando el descuento del 16%
     $descuento = 0.16;
     $totalAPagar = $sumaPrecios * (1 - $descuento);
     
-    // Mostrando los resultados
     echo "<h1>Resumen de Productos</h1>";
     echo "<p>Producto 1: $producto1 - Precio: $$precio1</p>";
     echo "<p>Producto 2: $producto2 - Precio: $$precio2</p>";
