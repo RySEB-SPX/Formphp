@@ -1,36 +1,89 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Productos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .formulario {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .tabla {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .tabla td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        .tabla tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .tabla tr:hover {
+            background-color: #f1f1f1;
+        }
+        .boton {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .boton:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
+    <h1>Formulario de Productos</h1>
     <form name="productos" class="formulario" action="informacion.php" method="POST">
-        <table class="tabla" border="1">
+        <table class="tabla">
             <tr>
                 <td>Nombre del Producto 1</td>
-                <td><input type="text" name="producto1"></td>
+                <td><input type="text" name="producto1" required></td>
             </tr>
             <tr>
                 <td>Precio del Producto 1</td>
-                <td><input type="text" name="precio1"></td>
+                <td><input type="number" name="precio1" step="0.01" required></td>
             </tr>
             <tr>
                 <td>Nombre del Producto 2</td>
-                <td><input type="text" name="producto2"></td>
+                <td><input type="text" name="producto2" required></td>
             </tr>
             <tr>
                 <td>Precio del Producto 2</td>
-                <td><input type="text" name="precio2"></td>
+                <td><input type="number" name="precio2" step="0.01" required></td>
             </tr>
             <tr>
                 <td>Nombre del Producto 3</td>
-                <td><input type="text" name="producto3"></td>
+                <td><input type="text" name="producto3" required></td>
             </tr>
             <tr>
                 <td>Precio del Producto 3</td>
-                <td><input type="text" name="precio3"></td>
+                <td><input type="number" name="precio3" step="0.01" required></td>
             </tr>
             <tr>
-                <td><input type="submit" value="Enviar Datos" class="boton"></td>
+                <td colspan="2" style="text-align: center;">
+                    <input type="submit" value="Enviar Datos" class="boton">
+                </td>
             </tr>
         </table>
     </form>
