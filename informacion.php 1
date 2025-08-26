@@ -13,6 +13,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     $descuento = 0.16;
     $totalAPagar = $sumaPrecios * (1 - $descuento);
+    
+    echo "<style>
+            table {
+                width: 50%;
+                margin: 20px auto;
+                border-collapse: collapse;
+                font-family: Arial, sans-serif;
+            }
+            th, td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: left;
+            }
+            th {
+                background-color: #f2f2f2;
+            }
+            h1, h2 {
+                text-align: center;
+            }
+          </style>";
+    
     echo "<h1>Resumen de Productos</h1>";
     echo "<table>
             <tr>
